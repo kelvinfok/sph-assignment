@@ -21,7 +21,19 @@ class APIClient {
     
     private let urlString = "https://data.gov.sg/api/action/datastore_search?resource_id=a807b7ab-6cad-4aa6-87d0-e283a7353a0f"
     
-    func fetch(completion: @escaping (Result<Feed, APIClientError>) -> Void) {
+    
+    func getFeed(completion: @escaping (Result<Feed, APIClientError>) -> Void) {
+        
+        if let feed = CacheManager.shared.retrieveFromCache() {
+            print("Retrieved from cache")
+            completion(.success(feed))
+        } else {
+            print("Cache is empty, fetch from network")
+            fetch(completion: completion)
+        }
+    }
+    
+    private func fetch(completion: @escaping (Result<Feed, APIClientError>) -> Void) {
         
         guard let url = URL(string: urlString) else {
             completion(.failure(.INVALID_URL_STRING))
@@ -34,8 +46,10 @@ class APIClient {
             }
             do {
                 let decoder = JSONDecoder()
-                let feedResult = try decoder.decode(Feed.self, from: jsonData)
-                completion(.success(feedResult))
+                let feed = try decoder.decode(Feed.self, from: jsonData)
+                print("Add Feed to cache")
+                CacheManager.shared.addToCache(feed: feed)
+                completion(.success(feed))
             } catch {
                 print(error)
                 completion(.failure(.CANNOT_PARSE_DATA))

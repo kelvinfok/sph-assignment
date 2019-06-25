@@ -29,7 +29,7 @@ class ListsViewController: UITableViewController {
     }
 
     private func fetchData() {
-        APIClient.shared.fetch { (result) in
+        APIClient.shared.getFeed { (result) in
             switch result {
             case .success(let feedResult):
                 feedResult.result.getYearlyRecords()?.forEach({ print($0.description) })
@@ -61,5 +61,9 @@ extension ListsViewController {
             self?.recordImageDidTap(year: year)
         }
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }

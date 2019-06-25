@@ -20,6 +20,8 @@
 		8D57CA5F22C210D900A46034 /* YearlyRecordTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D57CA5D22C210D900A46034 /* YearlyRecordTableViewCell.swift */; };
 		8D57CA6222C21BA900A46034 /* Double+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D57CA6122C21BA900A46034 /* Double+Extension.swift */; };
 		8D57CA6322C21BA900A46034 /* Double+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D57CA6122C21BA900A46034 /* Double+Extension.swift */; };
+		8D57CA6522C2307500A46034 /* CacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D57CA6422C2307500A46034 /* CacheManager.swift */; };
+		8D57CA6622C2307500A46034 /* CacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D57CA6422C2307500A46034 /* CacheManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,7 @@
 		8D57CA5922C1FA6900A46034 /* Record.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Record.swift; sourceTree = "<group>"; };
 		8D57CA5D22C210D900A46034 /* YearlyRecordTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YearlyRecordTableViewCell.swift; sourceTree = "<group>"; };
 		8D57CA6122C21BA900A46034 /* Double+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extension.swift"; sourceTree = "<group>"; };
+		8D57CA6422C2307500A46034 /* CacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				8D57CA5622C1F81B00A46034 /* APIClient.swift */,
+				8D57CA6422C2307500A46034 /* CacheManager.swift */,
 			);
 			path = manager;
 			sourceTree = "<group>";
@@ -258,6 +262,7 @@
 				8D57CA5A22C1FA6900A46034 /* Record.swift in Sources */,
 				8D57CA5722C1F81B00A46034 /* APIClient.swift in Sources */,
 				8D57CA5E22C210D900A46034 /* YearlyRecordTableViewCell.swift in Sources */,
+				8D57CA6522C2307500A46034 /* CacheManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,6 +271,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D57CA6322C21BA900A46034 /* Double+Extension.swift in Sources */,
+				8D57CA6622C2307500A46034 /* CacheManager.swift in Sources */,
 				8D57CA5B22C1FA6900A46034 /* Record.swift in Sources */,
 				8D57CA5F22C210D900A46034 /* YearlyRecordTableViewCell.swift in Sources */,
 				8D57CA4A22C1F5CA00A46034 /* sph_assignmentTests.swift in Sources */,

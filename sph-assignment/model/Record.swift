@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Feed: Decodable {
+class Feed: Decodable {
     
     let help: String
     let success: Bool
