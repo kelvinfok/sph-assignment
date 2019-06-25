@@ -12,7 +12,16 @@ class ListsViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        APIClient.shared.fetch { (result) in
+            switch result {
+            case .success(let feedResult):
+                print("feed: \(feedResult)")
+            case .failure(let failure):
+                print("failure: \(failure)")
+            }
+        }
+        
     }
 
 

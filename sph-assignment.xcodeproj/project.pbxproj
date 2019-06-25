@@ -13,6 +13,9 @@
 		8D57CA3C22C1F5CA00A46034 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D57CA3B22C1F5CA00A46034 /* Assets.xcassets */; };
 		8D57CA3F22C1F5CA00A46034 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D57CA3D22C1F5CA00A46034 /* LaunchScreen.storyboard */; };
 		8D57CA4A22C1F5CA00A46034 /* sph_assignmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D57CA4922C1F5CA00A46034 /* sph_assignmentTests.swift */; };
+		8D57CA5722C1F81B00A46034 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D57CA5622C1F81B00A46034 /* APIClient.swift */; };
+		8D57CA5A22C1FA6900A46034 /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D57CA5922C1FA6900A46034 /* Record.swift */; };
+		8D57CA5B22C1FA6900A46034 /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D57CA5922C1FA6900A46034 /* Record.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +39,8 @@
 		8D57CA4522C1F5CA00A46034 /* sph-assignmentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "sph-assignmentTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D57CA4922C1F5CA00A46034 /* sph_assignmentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sph_assignmentTests.swift; sourceTree = "<group>"; };
 		8D57CA4B22C1F5CA00A46034 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8D57CA5622C1F81B00A46034 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		8D57CA5922C1FA6900A46034 /* Record.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Record.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +82,8 @@
 		8D57CA3322C1F5C800A46034 /* sph-assignment */ = {
 			isa = PBXGroup;
 			children = (
+				8D57CA5822C1FA4800A46034 /* model */,
+				8D57CA5522C1F7FF00A46034 /* manager */,
 				8D57CA5422C1F72F00A46034 /* controllers */,
 				8D57CA3422C1F5C800A46034 /* AppDelegate.swift */,
 				8D57CA3822C1F5C800A46034 /* Main.storyboard */,
@@ -102,6 +109,22 @@
 				8D57CA3622C1F5C800A46034 /* ListViewController.swift */,
 			);
 			path = controllers;
+			sourceTree = "<group>";
+		};
+		8D57CA5522C1F7FF00A46034 /* manager */ = {
+			isa = PBXGroup;
+			children = (
+				8D57CA5622C1F81B00A46034 /* APIClient.swift */,
+			);
+			path = manager;
+			sourceTree = "<group>";
+		};
+		8D57CA5822C1FA4800A46034 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				8D57CA5922C1FA6900A46034 /* Record.swift */,
+			);
+			path = model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -207,6 +230,8 @@
 			files = (
 				8D57CA3722C1F5C800A46034 /* ListViewController.swift in Sources */,
 				8D57CA3522C1F5C800A46034 /* AppDelegate.swift in Sources */,
+				8D57CA5A22C1FA6900A46034 /* Record.swift in Sources */,
+				8D57CA5722C1F81B00A46034 /* APIClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,6 +239,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D57CA5B22C1FA6900A46034 /* Record.swift in Sources */,
 				8D57CA4A22C1F5CA00A46034 /* sph_assignmentTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
