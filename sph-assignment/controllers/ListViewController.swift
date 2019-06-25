@@ -41,7 +41,10 @@ class ListsViewController: UITableViewController {
     }
     
     private func recordImageDidTap(year: Int) {
-        print("Tapped on year: \(year)")
+        let alertController = UIAlertController(title: "Year: \(year)", message: "Decrease consumption found", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alertController.addAction(okAction)
+        self.present(alertController, animated: true, completion: nil)
     }
 }
 
