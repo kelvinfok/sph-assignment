@@ -28,14 +28,18 @@ class YearlyRecordTableViewCell: UITableViewCell {
     private func setupViews() {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(didTapOnImage))
         didDecreaseImageView.addGestureRecognizer(tapGesture)
+        didDecreaseImageView.isHidden = true
     }
     
     private func updateViews() {
         if let year = self.yearlyRecord?.year {
             yearLabel.text = "\(year)"
         }
-        if let consumption = self.yearlyRecord?.q1 {
-            consumptionLabel.text = "\(consumption)"
+        if let consumption = self.yearlyRecord?.totalConsumption {
+            consumptionLabel.text = "\(consumption.rounded(toDecimalPlaces: 6))"
+        }
+        if yearlyRecord?.hasDecreased == true {
+            didDecreaseImageView.isHidden = false
         }
     }
     

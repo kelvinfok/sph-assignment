@@ -32,6 +32,7 @@ class ListsViewController: UITableViewController {
         APIClient.shared.fetch { (result) in
             switch result {
             case .success(let feedResult):
+                feedResult.result.getYearlyRecords()?.forEach({ print($0.description) })
                 self.yearlyRecords = feedResult.result.getYearlyRecords()
             case .failure(let failure):
                 print("failure: \(failure)")

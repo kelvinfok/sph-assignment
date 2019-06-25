@@ -97,8 +97,22 @@ class YearlyRecord: CustomStringConvertible {
     var q3: Double? = nil
     var q4: Double? = nil
     
-    var hasDecreasedInMonthly: Bool {
-        return true
+    var hasDecreased: Bool {
+        
+        let periods = [q1, q2, q3, q4].filter({ $0 != nil })
+        
+        for _i in 0..<periods.count {
+            let i = periods.count - _i - 1
+            let element = periods[i]
+            for j in 0..<periods.count - _i - 1 {
+                let _element = periods[j]
+                if element! < _element! {
+                    return true
+                }
+            }
+        }
+        
+        return false
     }
     
     init(year: Int) {
@@ -114,6 +128,19 @@ class YearlyRecord: CustomStringConvertible {
         q4: \(String(describing: q4))
         
         """
+    }
+    
+    var totalConsumption: Double {
+        
+        var total = Double()
+        let periods = [q1, q2, q3, q4]
+        periods.forEach { (consumption) in
+            if let consumption = consumption {
+                total += consumption
+            }
+        }
+        
+        return total
     }
     
 }
