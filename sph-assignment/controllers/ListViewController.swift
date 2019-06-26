@@ -29,13 +29,15 @@ class ListsViewController: UITableViewController {
     }
 
     private func fetchData() {
-        APIClient.shared.getFeed { (result) in
+        let apiClient = APIClient()
+        apiClient.isCachingEnabled = true
+        apiClient.getFeed { (result) in
             switch result {
             case .success(let feedResult):
                 feedResult.result.getYearlyRecords()?.forEach({ print($0.description) })
                 self.yearlyRecords = feedResult.result.getYearlyRecords()
             case .failure(let failure):
-                print("failure: \(failure)")
+                print("Error fetching data: \(failure)")
             }
         }
     }
