@@ -11,7 +11,7 @@ import XCTest
 
 class YearlyRecordTests: XCTestCase {
     
-    func testHasDecreasedQuarterFalse_1() {
+    func testHasDecreasedInQuarterFalse_1() {
         
         let yearlyRecord = YearlyRecord(year: 2019,
                                         q1: 10,
@@ -23,7 +23,7 @@ class YearlyRecordTests: XCTestCase {
         XCTAssertFalse(hasDecreased)
     }
     
-    func testHasDecreasedQuarterFalse_2() {
+    func testHasDecreasedInQuarterFalse_2() {
         
         let yearlyRecord = YearlyRecord(year: 2019,
                                         q1: nil,
@@ -35,7 +35,7 @@ class YearlyRecordTests: XCTestCase {
         XCTAssertFalse(hasDecreased)
     }
     
-    func testHasDecreasedQuarterTrue_1() {
+    func testHasDecreasedInQuarterTrue_1() {
         
         let yearlyRecord = YearlyRecord(year: 2019,
                                         q1: 10,
@@ -47,7 +47,7 @@ class YearlyRecordTests: XCTestCase {
         XCTAssertTrue(hasDecreased)
     }
     
-    func testHasDecreasedQuarterTrue_2() {
+    func testHasDecreasedInQuarterTrue_2() {
         
         let yearlyRecord = YearlyRecord(year: 2019,
                                         q1: 10,
@@ -59,7 +59,7 @@ class YearlyRecordTests: XCTestCase {
         XCTAssertTrue(hasDecreased)
     }
     
-    func testHasDecreasedQuarterTrue_3() {
+    func testHasDecreasedInQuarterTrue_3() {
         
         let yearlyRecord = YearlyRecord(year: 2019,
                                         q1: 10,
@@ -71,7 +71,7 @@ class YearlyRecordTests: XCTestCase {
         XCTAssertTrue(hasDecreased)
     }
     
-    func testHasDecreasedQuarterTrue_4() {
+    func testHasDecreasedInQuarterTrue_4() {
         
         let yearlyRecord = YearlyRecord(year: 2019,
                                         q1: 10,
@@ -83,7 +83,7 @@ class YearlyRecordTests: XCTestCase {
         XCTAssertTrue(hasDecreased)
     }
     
-    func testHasDecreasedQuarterTrue_5() {
+    func testHasDecreasedInQuarterTrue_5() {
         
         let yearlyRecord = YearlyRecord(year: 2019,
                                         q1: nil,
@@ -97,7 +97,7 @@ class YearlyRecordTests: XCTestCase {
     
 
     
-    func testHasDecreasedQuarterTrue_6() {
+    func testHasDecreasedInQuarterTrue_6() {
         
         let yearlyRecord = YearlyRecord(year: 2019,
                                         q1: nil,
@@ -109,44 +109,15 @@ class YearlyRecordTests: XCTestCase {
         XCTAssertTrue(hasDecreased)
     }
     
-    func testYearlyTotalConsumption_1() {
-        
-        let yearlyRecord = YearlyRecord(year: 2019,
-                                        q1: nil,
-                                        q2: 30,
-                                        q3: nil,
-                                        q4: 20)
-        
-        let totalConsumption = yearlyRecord.totalConsumption
-        XCTAssertEqual(totalConsumption, 50)
-    }
     
-    func testYearlyTotalConsumption_2() {
-        
-        let yearlyRecord = YearlyRecord(year: 2019,
-                                        q1: 25,
-                                        q2: 30,
-                                        q3: 25,
-                                        q4: 20)
-        
-        let totalConsumption = yearlyRecord.totalConsumption
-        XCTAssertEqual(totalConsumption, 100)
-    }
     
-    func testYearlyTotalConsumption_3() {
-        
-        let yearlyRecord = YearlyRecord(year: 2019,
-                                        q1: nil,
-                                        q2: nil,
-                                        q3: nil,
-                                        q4: nil)
-        
-        let totalConsumption = yearlyRecord.totalConsumption
-        XCTAssertEqual(totalConsumption, 0)
-    }
+    
     
     
     
 }
+
+
+
 
 

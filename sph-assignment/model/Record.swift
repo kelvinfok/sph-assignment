@@ -89,7 +89,7 @@ struct Record: Decodable {
     }
 }
 
-class YearlyRecord: CustomStringConvertible {
+class YearlyRecord: CustomStringConvertible, Equatable {
     
     let year: Int
     var q1: Double? = nil
@@ -151,4 +151,14 @@ class YearlyRecord: CustomStringConvertible {
         return total
     }
     
+    static func ==(lhs: YearlyRecord, rhs: YearlyRecord) -> Bool {
+        return lhs.q1 == rhs.q1
+            && lhs.q2 == rhs.q2
+            && lhs.q3 == rhs.q3
+            && lhs.q4 == rhs.q4
+            && lhs.year == rhs.year
+    }
+    
 }
+
+
