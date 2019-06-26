@@ -24,6 +24,7 @@
 		8D57CA6622C2307500A46034 /* CacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D57CA6422C2307500A46034 /* CacheManager.swift */; };
 		8D85776A22C30D0C001048B8 /* MockAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D85776922C30D0C001048B8 /* MockAPIClient.swift */; };
 		8D85776C22C33B6A001048B8 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D57CA5622C1F81B00A46034 /* APIClient.swift */; };
+		8D85776E22C33FA0001048B8 /* YearlyRecordTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D85776D22C33FA0001048B8 /* YearlyRecordTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		8D57CA6122C21BA900A46034 /* Double+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extension.swift"; sourceTree = "<group>"; };
 		8D57CA6422C2307500A46034 /* CacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheManager.swift; sourceTree = "<group>"; };
 		8D85776922C30D0C001048B8 /* MockAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAPIClient.swift; sourceTree = "<group>"; };
+		8D85776D22C33FA0001048B8 /* YearlyRecordTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YearlyRecordTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 			children = (
 				8D85776922C30D0C001048B8 /* MockAPIClient.swift */,
 				8D57CA4922C1F5CA00A46034 /* NetworkTests.swift */,
+				8D85776D22C33FA0001048B8 /* YearlyRecordTests.swift */,
 				8D57CA4B22C1F5CA00A46034 /* Info.plist */,
 			);
 			path = "sph-assignmentTests";
@@ -276,6 +279,7 @@
 			files = (
 				8D57CA6322C21BA900A46034 /* Double+Extension.swift in Sources */,
 				8D85776C22C33B6A001048B8 /* APIClient.swift in Sources */,
+				8D85776E22C33FA0001048B8 /* YearlyRecordTests.swift in Sources */,
 				8D57CA6622C2307500A46034 /* CacheManager.swift in Sources */,
 				8D57CA5B22C1FA6900A46034 /* Record.swift in Sources */,
 				8D57CA5F22C210D900A46034 /* YearlyRecordTableViewCell.swift in Sources */,

@@ -119,6 +119,14 @@ class YearlyRecord: CustomStringConvertible {
         self.year = year
     }
     
+    init(year: Int, q1: Double?, q2: Double?, q3: Double?, q4: Double?) {
+        self.year = year
+        self.q1 = q1
+        self.q2 = q2
+        self.q3 = q3
+        self.q4 = q4
+    }
+    
     var description: String {
         return """
         Year: \(year),
